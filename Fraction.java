@@ -67,15 +67,15 @@ public class Fraction {
     }
     
     public Fraction add(Fraction other){
-    	
+		return other;
     }
     
     public Fraction subtract(Fraction other){
-    	
+    	return other;
     }
 
-    public Fraction multiply(Fraction other){
-    	
+    public Fraction divide(Fraction other){
+    	return other;
     }
     private int myGcd(int a, int b) {
         while (b != 0) {
