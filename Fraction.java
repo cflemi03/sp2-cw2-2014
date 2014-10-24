@@ -70,10 +70,10 @@ public class Fraction {
     	int num = 0;
     	int denom = 0;
 		if (this.getDenominator() == other.getDenominator()) {
-			num = this.getNumerator() + other.getDenominator();
+			num = this.getNumerator() + other.getNumerator();
 			denom = this.getDenominator();
 		}
-		else{
+		else {
 			while (this.getDenominator() != other.getDenominator()) {
 				denom = (this.getDenominator() * other.getDenominator());
 				num = (this.getNumerator() * other.getDenominator());
@@ -85,7 +85,21 @@ public class Fraction {
     }
     
     public Fraction subtract(Fraction other){
-    	return other;
+    	int num = 0;
+    	int denom = 0;
+		if (this.getDenominator() == other.getDenominator()) {
+			num = this.getNumerator() - other.getNumerator();
+			denom = this.getDenominator();
+		}
+		else {
+			while (this.getDenominator() != other.getDenominator()) {
+				denom = (this.getDenominator() * other.getDenominator());
+				num = (this.getNumerator() * other.getDenominator());
+				int num2 = (other.getNumerator() * this.getDenominator());
+				num -= num2;
+			}
+		}
+		return new Fraction(num, denom);
     }
 
     public Fraction divide(Fraction other){
