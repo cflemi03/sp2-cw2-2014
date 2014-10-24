@@ -103,7 +103,11 @@ public class Fraction {
     }
 
     public Fraction divide(Fraction other){
-    	return other;
+    	int holddenom = other.getDenominator();
+    	int holdnum = other.getNumerator();
+    	int num = this.getNumerator() * holddenom;
+        int denom = this.getDenominator() * holdnum;
+        return new Fraction(num, denom);
     }
     private int myGcd(int a, int b) {
         while (b != 0) {
