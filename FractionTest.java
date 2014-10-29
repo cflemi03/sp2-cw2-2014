@@ -1,9 +1,7 @@
 package fractions;
 
 /**
- * Created by keith for the second coursework assignment.
- *
- * All the tests should be (re-)written using JUnit
+ * Chris Fleming's submission for Coursework 2 - SP2
  */
 public class FractionTest {
     public static void main(String[] args) {
