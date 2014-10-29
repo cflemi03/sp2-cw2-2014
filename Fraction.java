@@ -18,7 +18,11 @@ public class Fraction {
         setDenominator(denom / gcd);
     }
 
-    @Override
+    public Fraction(double abs) {
+		
+	}
+
+	@Override
     public String toString() {
         return "" + getNumerator() + '/' + getDenominator();
     }
@@ -109,6 +113,22 @@ public class Fraction {
         int denom = this.getDenominator() * holdnum;
         return new Fraction(num, denom);
     }
+    
+    public Fraction absValue(Fraction other) {
+
+        int num = this.getNumerator();
+        int denom = this.getDenominator();
+        double abs = (num*1.0) / (denom*1.0);
+        return new Fraction(abs);
+    }
+    
+    public Fraction negate(Fraction other) {
+
+        int num = 0 - this.getNumerator();
+        int denom = this.getDenominator();
+        return new Fraction(num, denom);
+    }
+    
     private int myGcd(int a, int b) {
         while (b != 0) {
             int t = b;
