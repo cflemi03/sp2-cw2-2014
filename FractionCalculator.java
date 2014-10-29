@@ -1,6 +1,7 @@
 package fractions;
 
 import java.util.Scanner; 
+import class.fractions.Fraction();
 
 public class FractionCalculator {
 
@@ -8,13 +9,29 @@ public class FractionCalculator {
 		new Fraction(0,1);
 	}
 	
-	public String calc(String calc, String hold) {
+	public String calc(String calc, int hold) {
 		Scanner input = new Scanner(System.in);
-		hold = input.next();
-		if (hold.isDigit())
-		if (input.next() == "+") {
-			int sum = hold + input.next();
+		int sum = 0;
+		while (input.notEmpty()) {
+			if ((input.next()).isDigit()){
+				hold = input.next();
+			}
+			if (input.next() == "+") {
+				sum = hold + (input.next());
+			}
+			else if (input.next() == "-") {
+				sum = hold - (input.next());
+			}
+			else if (input.next() == "*") {
+				sum = hold * (input.next());
+			}
+			else if (input.next() == " / ") {
+				sum = hold / (input.next());
+			}
+			else if (input.next() == "/") {
+				fractions.Fraction = new Fraction(hold, (input,next())
+			}
 		}
-		int num1 = input.nextInt();
+			
 	}
 }
