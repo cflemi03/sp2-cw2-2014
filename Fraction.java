@@ -24,10 +24,17 @@ public class Fraction {
 
 	@Override
     public String toString() {
-        return "" + getNumerator() + '/' + getDenominator();
+        if (getDenominator() == 1){
+        	return String("" + getNumerator());
+        }
+		return "" + getNumerator() + '/' + getDenominator();
     }
 
-    public int getNumerator() {
+    public String String(String numerator2) {
+		return null;
+	}
+
+	public int getNumerator() {
         return numerator;
     }
 
